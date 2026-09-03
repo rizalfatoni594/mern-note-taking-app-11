@@ -12,6 +12,7 @@ export default function App() {
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/create' element={<CreatePage />} />
+        {/* hmmm */}
         <Route path='/note/:id' element={<NoteDetailPage />} />
       </Routes>
     </div>
