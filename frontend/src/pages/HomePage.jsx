@@ -37,7 +37,7 @@ export default function HomePage() {
     <>
       <NavBar />
 
-      {isRateLimited && <RateLimitedUI />}
+      {true && <RateLimitedUI />}
 
       <div className='max-w-7xl mx-auto p-4 mt-6'>
         {loading && <div>Loading notes ⏳</div>}
