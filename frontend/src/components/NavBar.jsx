@@ -8,7 +8,7 @@ export default function NavBar() {
         <div className='flex justify-between items-center'>
           <h1 className='text-3xl font-bold text-primary font-mono tracking-tight'>
             Journie🪶
-            <span className='block text-sm text-base-content/60'>
+            <span className='block text-sm text-base-content/55'>
               It stays here, free your mind.
             </span>
           </h1>

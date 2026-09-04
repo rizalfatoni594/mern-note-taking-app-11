@@ -1,7 +1,7 @@
 export default function LoadingNotes() {
   return (
     <div className='text-center py-10'>
-      <h3 className='text-lg text-primary mb-3'> Loading notes... ⏳</h3>
+      <h3 className='text-lg text-primary mb-3'> Loading notes... 👣</h3>
 
       <div className='text-sm text-base-content'>
         <p>Hi, thank you for visiting our web.</p>
