@@ -56,7 +56,7 @@ export default function CreatePage() {
               <div className='card-body'>
                 <h2 className='card-title text-2xl mb-4'>Create New Note</h2>
                 <form onSubmit={handleSubmit}>
-                  {/* this is the new replacement for the form-control in daisyui */}
+                  {/* fieldset is the new replacement for the form-control in daisyui */}
                   {/* form-control for title */}
                   <fieldset className='fieldset mb-4'>
                     <legend className='fieldset-legend'>Title</legend>
@@ -74,7 +74,7 @@ export default function CreatePage() {
                     <legend className='fieldset-legend'>Content</legend>
                     <textarea
                       type='text'
-                      placeholder='Note Title'
+                      placeholder='Write your note here ...'
                       className='textarea h-32'
                       value={content}
                       onChange={(e) => setContent(e.target.value)}

@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 import { PenSquareIcon, Trash2Icon } from 'lucide-react';
 import { formatDate } from '../lib/utils.js';
 
-export default function NoteCard({ note, setNote }) {
+export default function NoteCard({ note, setNotes }) {
   async function handleDelete(e, id) {
     e.preventDefault(); // get rid of the default navigation of the parent
 
@@ -12,7 +12,7 @@ export default function NoteCard({ note, setNote }) {
 
     try {
       await api.delete(`notes/${note._id}`);
-      setNote((prevNotes) => prevNotes.filter((note) => note._id !== id));
+      setNotes((prevNotes) => prevNotes.filter((note) => note._id !== id));
       toast.success('Note deleted successfully.');
     } catch (error) {
       console.log('Error in handleDelete.', error);
@@ -34,7 +34,10 @@ export default function NoteCard({ note, setNote }) {
           </span>
           <div className='flex items-center gap-1'>
             <PenSquareIcon className='size-4' />
-            <button className='btn btn-xs btn-ghost text-error'>
+            <button
+              className='btn btn-xs btn-ghost text-error'
+              onClick={(e) => handleDelete(e, note._id)}
+            >
               <Trash2Icon className='size-4' />
             </button>
           </div>
